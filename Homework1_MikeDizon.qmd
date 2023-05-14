@@ -415,31 +415,11 @@ cancellations <- flights %>%
   
   # a cancelled flight is one with no `dep_time` 
   filter(is.na(dep_time))
-
-
-
-
-# First, create a new dataframe that summarizes the cancellations by month, carrier, and airport origin
-canc_summary <- cancellations %>% 
-  mutate(origin_group = ifelse(origin == "EWR", "EWR", "JFK")) %>%
-  group_by(month, carrier, origin_group) %>% 
-  summarise(num_canc = n()) %>% 
-  ungroup()
-
-# Then, create a plot with subplots for each origin airport
-ggplot(canc_summary, aes(x = month, y = num_canc, group = carrier)) + 
-  geom_col() + 
-  facet_wrap(origin_group ~ carrier, scales = "free_y") + 
-  labs(title = "Cancellations by Month, Carrier, and Origin Airport", x = "Month", y = "Number of Cancellations")
-
-
-
-
-
-
 ```
 
 I want you to think how we would organise our data manipulation to create the following plot. No need to write the code, just explain in words how you would go about it.
+
+**Answer:** I would start by creating a new dataframe that would summarize the cancellations by month, carrier, and airport origin. I would then use the `geom_col()` under the `ggplot()` function to do a bar graph for the resulting dataset. Finally, I would integrate the `facet_wrap()` function to organize the data into subplots organized according to airport origin and carrier.
 
 ![](images/sfo-cancellations.png)
 
@@ -507,7 +487,7 @@ The mean age difference is 10.4 while the median age difference is 8.
 
 -   The `half plus seven\` rule. Large age disparities in relationships carry certain stigmas. One popular rule of thumb is the [half-your-age-plus-seven](https://en.wikipedia.org/wiki/Age_disparity_in_sexual_relationships#The_.22half-your-age-plus-seven.22_rule) rule. This rule states you should never date anyone under half your age plus seven, establishing a minimum boundary on whom one can date. In order for a dating relationship to be acceptable under this rule, your partner's age must be:
 
-$$\frac{\text{Your age}}{2} + 7 \< \text{Partner Age} \< (\text{Your age} - 7) \* 2$$
+$$\frac{\text{Your age}}{2} + 7 \\\< \text{Partner Age} \\\< (\text{Your age} - 7) \\\* 2$$
 How frequently does this rule apply in this dataset?
 
 ```{r}
@@ -613,10 +593,6 @@ There is a lot of explanatory text, comments, etc. You do not need these, so del
 -   Who did you collaborate with: N/A
 -   Approximately how much time did you spend on this problem set: 1 day
 -   What, if anything, gave you the most trouble: Using ggplots() for sophisticated graphs
-
-**Please seek out help when you need it,** and remember the [15-minute rule](https://mam2022.netlify.app/syllabus/#the-15-minute-rule){target="\_blank"}. You know enough R (and have enough examples of code from class and your readings) to be able to do this. If you get stuck, ask for help from others, post a question on Slack-- and remember that I am here to help too!
-
-> As a true test to yourself, do you understand the code you submitted and are you able to explain it to someone else?
 
 # Rubric
 
