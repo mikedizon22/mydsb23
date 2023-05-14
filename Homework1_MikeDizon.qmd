@@ -487,7 +487,7 @@ The mean age difference is 10.4 while the median age difference is 8.
 
 -   The `half plus seven\` rule. Large age disparities in relationships carry certain stigmas. One popular rule of thumb is the [half-your-age-plus-seven](https://en.wikipedia.org/wiki/Age_disparity_in_sexual_relationships#The_.22half-your-age-plus-seven.22_rule) rule. This rule states you should never date anyone under half your age plus seven, establishing a minimum boundary on whom one can date. In order for a dating relationship to be acceptable under this rule, your partner's age must be:
 
-$$\frac{\text{Your age}}{2} + 7 \\\< \text{Partner Age} \\\< (\text{Your age} - 7) \\\* 2$$
+$$\frac{\text{Your age}}{2} + 7 \\\\\\\< \text{Partner Age} \\\\\\\< (\text{Your age} - 7) \\\\\\\* 2$$
 How frequently does this rule apply in this dataset?
 
 ```{r}
@@ -593,11 +593,3 @@ There is a lot of explanatory text, comments, etc. You do not need these, so del
 -   Who did you collaborate with: N/A
 -   Approximately how much time did you spend on this problem set: 1 day
 -   What, if anything, gave you the most trouble: Using ggplots() for sophisticated graphs
-
-# Rubric
-
-13/13: Problem set is 100% completed. Every question was attempted and answered, and most answers are correct. Code is well-documented (both self-documented and with additional comments as necessary). Used tidyverse, instead of base R. Graphs and tables are properly labelled. Analysis is clear and easy to follow, either because graphs are labeled clearly or you've written additional text to describe how you interpret the output. Multiple Github commits. Work is exceptional. I will not assign these often.
-
-8/13: Problem set is 60--80% complete and most answers are correct. This is the expected level of performance. Solid effort. Hits all the elements. No clear mistakes. Easy to follow (both the code and the output). A few Github commits.
-
-5/13: Problem set is less than 60% complete and/or most answers are incorrect. This indicates that you need to improve next time. I will hopefully not assign these often. Displays minimal effort. Doesn't complete all components. Code is poorly written and not documented. Uses the same type of plot for each graph, or doesn't use plots appropriate for the variables being analyzed. No Github commits.
